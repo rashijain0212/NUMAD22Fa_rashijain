@@ -18,20 +18,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        About_btn = findViewById(R.id.AboutMe);
 
 
-        About_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                About_Me_Fn();
-            }
+    }
+    public void goToLinkCollector(View view) {
+        Intent intent = new Intent(this, LinkCollector.class);
+        startActivity(intent);
+    }
 
-            private void About_Me_Fn() {
-                Toast.makeText(getApplicationContext(), "Name :- Rashi Jain and Email :- jain.ras@northeastern.edu", Toast.LENGTH_LONG).show();
-            }
-        });
-
+    public void goToAboutMe(View view) {
+        Intent intent = new Intent(this, AboutMe.class);
+        startActivity(intent);
     }
 
     public void goToAnActivity(View view) {
