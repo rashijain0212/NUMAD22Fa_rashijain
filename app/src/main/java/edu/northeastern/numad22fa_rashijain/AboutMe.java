@@ -1,8 +1,8 @@
 package edu.northeastern.numad22fa_rashijain;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutMe extends AppCompatActivity {
 
