@@ -34,8 +34,7 @@ public class linkInput extends AppCompatActivity {
         Snackbar snackbar = Snackbar
                 .make(view, "link added", Snackbar.LENGTH_LONG);
         snackbar.show();
-        Intent intent = new Intent(this, LinkCollector.class).putExtra("MESSAGE", "Code Accepted");
-        ;
+        Intent intent = new Intent(this, LinkCollector.class);
         startActivity(intent);
 
 

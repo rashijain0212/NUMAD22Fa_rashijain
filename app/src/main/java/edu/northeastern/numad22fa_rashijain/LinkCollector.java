@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -26,6 +27,8 @@ public class LinkCollector extends AppCompatActivity {
         setContentView(R.layout.activity_link_collector);
 
         linksList = myApplication.getLinksList();
+
+
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
@@ -33,17 +36,15 @@ public class LinkCollector extends AppCompatActivity {
 
         mAdapter = new RecycleViewAdapter(linksList, this);
         recyclerView.setAdapter(mAdapter);
+        checkList();
 
     }
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
+    public void checkList(){
+        if(linksList.size() > 0) {
+            Snackbar snackbar = Snackbar
+                    .make(recyclerView, "link added", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
     }
 
     public void goToLinkInput(View view) {
