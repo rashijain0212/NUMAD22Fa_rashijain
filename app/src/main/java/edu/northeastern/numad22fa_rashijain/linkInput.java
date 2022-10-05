@@ -28,6 +28,7 @@ public class linkInput extends AppCompatActivity {
 
     public void goBackToView(View view) {
 
+
         Links newLink = new Links(add_name.getText().toString(), add_url.getText().toString());
         linksList.add(newLink);
         Snackbar snackbar = Snackbar

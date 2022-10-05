@@ -5,42 +5,54 @@
     android:id="@+id/one_line"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#802B2B">>
+    android:background="#802B2B">
 
     <TextView
         android:id="@+id/name_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
         android:text="Name"
         android:textColor="#FFEB3B"
-        app:layout_constraintBottom_toTopOf="@+id/urlbox"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.362" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/urlbox"
-        android:layout_width="52dp"
-        android:layout_height="18dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
         android:text="URL"
         android:textColor="#FFEB3B"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_box" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginBottom="568dp"
+        android:layout_marginTop="232dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scroll Down for more URLs"
+        android:textColor="#8BC34A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/urlbox"
         tools:ignore="MissingConstraints" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
