@@ -33,7 +33,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
         holder.name.setText(linksList.get(position).getName());
         holder.url.setText(linksList.get(position).getURL());
-
     }
 
     @Override

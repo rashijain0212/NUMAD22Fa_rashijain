@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
 
 public class linkInput extends AppCompatActivity {
@@ -28,8 +30,13 @@ public class linkInput extends AppCompatActivity {
 
         Links newLink = new Links(add_name.getText().toString(), add_url.getText().toString());
         linksList.add(newLink);
-        Intent intent = new Intent(this, LinkCollector.class).putExtra("MESSAGE", "Code Accepted");;
+        Snackbar snackbar = Snackbar
+                .make(view, "link added", Snackbar.LENGTH_LONG);
+        snackbar.show();
+        Intent intent = new Intent(this, LinkCollector.class).putExtra("MESSAGE", "Code Accepted");
+        ;
         startActivity(intent);
+
 
     }
 }

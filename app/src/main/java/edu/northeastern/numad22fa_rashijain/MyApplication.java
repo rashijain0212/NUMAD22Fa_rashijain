@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyApplication extends Application {
+
     private static List<Links> linksList = new ArrayList<>();
 
     public static List<Links> getLinksList() {

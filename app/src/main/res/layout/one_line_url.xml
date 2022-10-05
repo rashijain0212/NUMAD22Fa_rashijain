@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/one_line"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">>
+    android:layout_height="match_parent"
+    android:background="#802B2B">>
 
     <TextView
         android:id="@+id/name_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
+        android:textColor="#FFEB3B"
         app:layout_constraintBottom_toTopOf="@+id/urlbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
@@ -24,6 +26,7 @@
         android:layout_height="18dp"
         android:layout_marginBottom="68dp"
         android:text="URL"
+        android:textColor="#FFEB3B"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
