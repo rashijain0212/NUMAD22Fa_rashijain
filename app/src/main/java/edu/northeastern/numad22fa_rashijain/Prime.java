@@ -36,16 +36,18 @@ public class Prime extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prime);
+        this.handler = new Handler();
+        this.handler1 = new Handler();
+        this.myThread = new Thread__();
         this.Find_Primes = findViewById(R.id.FindPrimes);
         this.Terminate_Search = findViewById(R.id.TerminateSearch);
         this.Current_Number = findViewById(R.id.Current_Number);
         this.Latest_PrimeNumber_Found = findViewById(R.id.LatestPrimeNumberFound);
-        this.handler = new Handler();
-        this.handler1 = new Handler();
-        this.myThread = new Thread__();
+
         this.Find_Primes.setOnClickListener(view -> {
             Prime.this.flag = true;
-            new Thread__().start();
+            Thread__ runnableThread = new Thread__();
+            new Thread(runnableThread).start();
         });
         this.Terminate_Search.setOnClickListener(view -> Prime.this.flag = false);
     }
@@ -64,7 +66,7 @@ public class Prime extends AppCompatActivity {
         startActivity(new Intent(this, MainActivity.class));
     }
 
-    class Thread__ extends Thread {
+    class Thread__ implements Runnable {
         Thread__() {
         }
 
