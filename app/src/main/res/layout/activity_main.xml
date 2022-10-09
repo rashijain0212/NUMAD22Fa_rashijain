@@ -28,20 +28,19 @@
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.137" />
 
     <Button
         android:id="@+id/clicky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:onClick="goToAnActivity"
         android:text="Clicky Clicky"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389" />
+        app:layout_constraintTop_toBottomOf="@+id/AboutMe" />
 
     <Button
         android:id="@+id/linkcollector"
@@ -49,11 +48,23 @@
         android:layout_height="wrap_content"
         android:onClick="goToLinkCollector"
         android:text="Link Collector"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_prime"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clicky"
-        app:layout_constraintVertical_bias="0.243" />
+        app:layout_constraintVertical_bias="0.205" />
+
+    <Button
+        android:id="@+id/btn_prime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToAnPrime"
+        android:text="Primes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkcollector" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

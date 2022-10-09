@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToAnPrime(View view) {
+        Intent intent = new Intent(this, Prime.class);
+        startActivity(intent);
+    }
+
     public void goToAnActivity(View view) {
         Intent intent = new Intent(this, AnActivity.class);
         startActivity(intent);

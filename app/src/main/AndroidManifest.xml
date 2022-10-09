@@ -15,6 +15,9 @@
         android:theme="@style/Theme.NUMAD22Fa_rashijain"
         tools:targetApi="31">
         <activity
+            android:name=".Prime"
+            android:exported="false" />
+        <activity
             android:name=".linkInput"
             android:exported="false" />
         <activity
